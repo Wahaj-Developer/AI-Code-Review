@@ -94,3 +94,227 @@ The application combines an interactive code editor, syntax highlighting, markdo
 
 ---
 
+## Why This Project?
+
+Code reviews are an essential part of software development, but they often require time, collaboration, and experienced developers.
+
+This project demonstrates how Artificial Intelligence can assist developers by providing:
+
+- Instant code reviews
+- Performance recommendations
+- Security analysis
+- Best practice suggestions
+- Refactoring opportunities
+- Code quality improvements
+
+The goal is not to replace human reviewers but to help developers identify issues earlier and learn from AI-generated recommendations.
+
+---
+
+# ✨ Features
+
+## 🎨 Interactive Code Editor
+
+- Real-time syntax highlighting
+- Clean coding environment
+- Responsive editor layout
+- Scroll synchronization
+- Placeholder guidance
+
+---
+
+## 🤖 AI-Powered Code Review
+
+Generate professional reviews including:
+
+- Overall Code Score
+- Executive Summary
+- Code Quality Analysis
+- Strengths
+- Weaknesses
+- Bug Detection
+- Refactoring Suggestions
+- Performance Improvements
+- Security Recommendations
+- Best Practices
+- Testing Suggestions
+
+---
+
+## 📝 Markdown Rendering
+
+The AI response is rendered as a professional document with:
+
+- Headings
+- Lists
+- Tables
+- Syntax-highlighted code blocks
+- Formatted markdown
+
+---
+
+## 📋 Copy Features
+
+- Copy individual code snippets
+- Copy the complete review
+- Visual confirmation after copying
+
+---
+
+## ⚡ User Experience
+
+- Fast AI responses
+- Loading animations
+- Responsive design
+- Friendly error messages
+- Clean split-screen interface
+
+---
+
+# 🌍 Multi-Language Support
+
+The AI Code Reviewer is designed to analyze code written in a wide range of programming languages.
+
+### Currently Supported
+
+- JavaScript
+- TypeScript
+- Python
+- Java
+- C
+- C++
+- C#
+- Go
+- Rust
+- PHP
+- Ruby
+- Kotlin
+- Swift
+- Dart
+- HTML
+- CSS
+- SQL
+- Bash
+- JSON
+- YAML
+
+The AI automatically understands the submitted language and provides language-specific recommendations without requiring manual language selection.
+
+---
+
+# ⭐ Project Highlights
+
+✔ AI-powered code review
+
+✔ Google Gemini AI integration
+
+✔ Modern React frontend
+
+✔ Express.js REST API
+
+✔ Interactive code editor
+
+✔ Real-time syntax highlighting
+
+✔ Markdown rendering
+
+✔ Copy code snippets
+
+✔ Responsive interface
+
+✔ Error handling
+
+✔ Modular project structure
+
+✔ Clean code architecture
+
+---
+
+
+
+## 💻 Code Editor
+![Home](./screenshot/CodeTerminal.png)
+---
+
+## 🤖 AI Review Result
+![result](./screenshot/result.png)
+
+
+
+---
+
+# 🏗 System Architecture
+
+The project follows a simple client-server architecture.
+
+```text
+                    +------------------------+
+                    |    React Frontend      |
+                    |  Code Editor + Review  |
+                    +-----------+------------+
+                                |
+                             Axios
+                                |
+                                ▼
+                    +------------------------+
+                    |    Express Backend     |
+                    |   REST API Endpoints   |
+                    +-----------+------------+
+                                |
+                     Google Gemini AI API
+                                |
+                                ▼
+                  AI Code Review & Suggestions
+```
+
+---
+
+# 🔄 Application Workflow
+
+```text
+User Opens Application
+          │
+          ▼
+Paste Source Code
+          │
+          ▼
+Click "Analyze Code"
+          │
+          ▼
+Axios POST Request
+          │
+          ▼
+Express Backend
+          │
+          ▼
+Google Gemini AI
+          │
+          ▼
+Generate Review
+          │
+          ▼
+Return Markdown Response
+          │
+          ▼
+Render Review
+          │
+          ▼
+Copy or Read Suggestions
+```
+
+---
+
+**✅ End of Part 1**
+
+The next part will include:
+
+- 📁 Project Structure
+- 🛠 Technologies Used
+- 🚀 Getting Started
+- ⚙ Environment Variables
+- 📡 API Documentation
+- 📂 Backend Documentation
+
+
+---
+
