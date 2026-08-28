@@ -304,3 +304,382 @@ Copy or Read Suggestions
 
 ---
 
+
+# 📁 Project Structure
+
+The project follows a clean and modular full-stack architecture, separating the frontend and backend into independent applications. This approach improves scalability, maintainability, and future development.
+
+```text
+Project-1/
+│
+├── Backend/
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   └── ai.controller.js
+│   │   │
+│   │   ├── routes/
+│   │   │   └── ai.routes.js
+│   │   │
+│   │   ├── services/
+│   │   │   └── ai.service.js
+│   │   │
+│   │   └── app.js
+│   │
+│   ├── server.js
+│   ├── package.json
+│   └── .env
+│
+├── Frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   ├── main.jsx
+│   │   └── index.css
+│   │
+│   ├── package.json
+│   ├── vite.config.js
+│   └── index.html
+│
+└── README.md
+```
+
+---
+
+# 🛠 Technologies Used
+
+## Frontend
+
+| Technology | Purpose |
+|------------|---------|
+| React | Build the user interface |
+| Vite | Development server & build tool |
+| Axios | HTTP requests |
+| React Markdown | Render AI responses |
+| PrismJS | Editor syntax highlighting |
+| Highlight.js | Markdown code highlighting |
+| React Simple Code Editor | Interactive code editor |
+
+---
+
+## Backend
+
+| Technology | Purpose |
+|------------|---------|
+| Node.js | JavaScript runtime |
+| Express.js | REST API |
+| Google Gemini AI | AI-powered code review |
+| CORS | Cross-origin communication |
+| dotenv | Environment variable management |
+
+---
+
+## Development Tools
+
+- Git
+- GitHub
+- Visual Studio Code
+- npm
+- Chrome Developer Tools
+- Postman
+
+---
+
+# 🏗 Architecture Overview
+
+The application follows a layered architecture where each layer has a single responsibility.
+
+```text
+React Frontend
+       │
+       ▼
+Axios API Requests
+       │
+       ▼
+Express Routes
+       │
+       ▼
+Controllers
+       │
+       ▼
+AI Service
+       │
+       ▼
+Google Gemini AI
+```
+
+### Frontend Responsibilities
+
+- Code editing
+- Syntax highlighting
+- Markdown rendering
+- API communication
+- Copy functionality
+- Loading states
+
+---
+
+### Backend Responsibilities
+
+- API routing
+- Request validation
+- AI communication
+- Error handling
+- Response formatting
+
+---
+
+# 🚀 Getting Started
+
+## Prerequisites
+
+Before running the project, ensure you have the following installed.
+
+- Node.js (v18 or higher)
+- npm
+- Git
+- Google Gemini API Key
+
+---
+
+## Clone the Repository
+
+```bash
+git clone https://github.com/your-username/AI-Code-Reviewer.git
+```
+
+Move into the project directory.
+
+```bash
+cd AI-Code-Reviewer
+```
+
+---
+
+# ⚙ Backend Installation
+
+Navigate to the backend folder.
+
+```bash
+cd Backend
+```
+
+Install dependencies.
+
+```bash
+npm install
+```
+
+Create a `.env` file.
+
+```env
+GOOGLE_GEMINI_KEY=YOUR_API_KEY
+```
+
+Start the backend server.
+
+```bash
+npm run dev
+```
+
+Backend URL
+
+```text
+http://localhost:3000
+```
+
+---
+
+# 💻 Frontend Installation
+
+Open another terminal.
+
+```bash
+cd Frontend
+```
+
+Install dependencies.
+
+```bash
+npm install
+```
+
+Run the frontend.
+
+```bash
+npm run dev
+```
+
+Frontend URL
+
+```text
+http://localhost:5173
+```
+
+---
+
+# ▶ Running the Application
+
+Start both servers.
+
+### Terminal 1
+
+```bash
+cd Backend
+npm run dev
+```
+
+---
+
+### Terminal 2
+
+```bash
+cd Frontend
+npm run dev
+```
+
+Visit
+
+```text
+http://localhost:5173
+```
+
+Paste your code into the editor and click **Analyze Code**.
+
+---
+
+# ⚙ Environment Variables
+
+Create a `.env` file inside the Backend folder.
+
+```env
+GOOGLE_GEMINI_KEY=your_google_gemini_api_key
+```
+
+> **Important:** Never commit your `.env` file to GitHub. Keep your API keys private.
+
+---
+
+# 📡 API Documentation
+
+The backend exposes a simple REST API for AI-powered code review.
+
+---
+
+## Analyze Code
+
+### Endpoint
+
+```http
+POST /ai/get-review
+```
+
+---
+
+### Request Body
+
+```json
+{
+  "code": "function add(a, b) {\n  return a + b;\n}"
+}
+```
+
+---
+
+### Successful Response
+
+````markdown
+# Overall Score
+
+9/10
+
+# Executive Summary
+
+Well-structured function with clear naming.
+
+# Strengths
+
+- Readable
+- Efficient
+- Easy to maintain
+
+# Performance Review
+
+No performance issues detected.
+
+# Security Review
+
+No security concerns found.
+
+# Best Practices
+
+- Add JSDoc comments.
+- Consider input validation.
+`````
+
+---
+
+### Status Codes
+
+| Status | Description                   |
+| ------ | ----------------------------- |
+| 200    | Review generated successfully |
+| 400    | Invalid or missing code       |
+| 500    | Internal server error         |
+
+---
+
+# 📤 Example Request
+
+```javascript
+const response = await axios.post(
+  "http://localhost:3000/ai/get-review",
+  {
+    code
+  }
+);
+
+console.log(response.data);
+```
+
+---
+
+# 📥 Example Response
+
+```json
+{
+  "review": "# Overall Score\n9/10\n..."
+}
+```
+
+---
+
+# 🔄 API Flow
+
+```text
+User Code
+     │
+     ▼
+POST /ai/get-review
+     │
+     ▼
+Express Route
+     │
+     ▼
+Controller
+     │
+     ▼
+AI Service
+     │
+     ▼
+Google Gemini AI
+     │
+     ▼
+Markdown Review
+     │
+     ▼
+React Frontend
+```
+
+---
+
